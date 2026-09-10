@@ -158,6 +158,8 @@ h6 {
 
 .recipe img {
   max-width: 100%;
+  width: 100%;
+  display: block;
 }
 
 .recipe-list-item {
