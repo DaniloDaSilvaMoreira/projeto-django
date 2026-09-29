@@ -2,11 +2,16 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+from dotenv import load_dotenv
 
+# Força o Python a enxergar a pasta utils e os apps no Linux
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 def main():
     """Run administrative tasks."""
+    # Corrigido: mudado de 'project.settings' para 'ProjetoAdmin.settings'
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ProjetoAdmin.settings')
+    load_dotenv()
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
