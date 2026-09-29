@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # A gente tem apps também
     'recipes',
+    'tag',
+    
 ]
 
 MIDDLEWARE = [
@@ -128,6 +130,9 @@ STATIC_ROOT = BASE_DIR / 'static'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
 # Email
 # https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration
 
@@ -136,3 +141,6 @@ MAILERS = {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
 }
+import mimetypes
+
+mimetypes.add_type("application/javascript", ".js", True)
