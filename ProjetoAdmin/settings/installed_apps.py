@@ -1,5 +1,3 @@
-
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -7,7 +5,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # A gente tem apps também
+    # Adicione a linha abaixo:
+    'rest_framework',
     'recipes',
     'tag',
 ]
